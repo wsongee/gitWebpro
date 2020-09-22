@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href="../css/public.css">;
+<style>
+	iframe{
+		width:80%;
+		height:400px;
+		/*border:none;*/ <!--테두리없음--->
+		border : 2px slild black;
+	}
+	
+</style>
+</head>
+<body>
+<pre>
+작성팁
+iframe : 웹페이지 않에서 다른 웹페이지를 표시하고자 할때 사용
+
+a링크 태그에서 target의  속성값으로 ifroame의 name을 이용하여 다른 html 문서를수행할 수 있디.
+
+&lt;iframe src="../menu.html" name = "ifr"&gt;
+&lt;a href src="../아메리카노.html" target= "ifr"&gt; &lt;/a%gt;
+</pre>
+  <h1> Hello </h1>
+  <h2> 오늘은 즐거운 금요일 </h2>
+  <a href="../아메리카노.html" target="ifr">아메리카노</a>
+  <a href="../에스프레소.html" target="_blank">에스프레소</a>
+  <a href="../카페라떼.html" target="ifr">카페라떼</a>
+  <a href="../카푸치노.html" target="_blank">카푸치노</a>
+  
+  <br><br>
+  <iframe src="../menu.html" name = "ifr">
+  
+  </iframe>
+  
+  
+</body>
+</html>

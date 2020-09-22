@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+	select{
+		width:300px;
+	}
+</style>
+<script>
+window.onload=function(){
+	form=document.selForm;
+	form.data.focus();
+}
+	function proc1(){
+		vgoo =document.selForm.data.value;
+		res="";
+			
+			res += "*** " +vgoo+ " 단 ***\n"
+			for(i=1; i<=9; i++){
+				res += vgoo + " * " + i +" = " + (vgoo*i)+"\n";
+			}
+			
+			document.selForm.area.value=res;
+// 			document.querySelector('#area').innerHTML = res;
+	}
+
+</script>
+</head>
+<body>
+
+<form name="selForm">
+	<input type="text" name="data">단 
+	<input type="button" value="출력" onclick="proc1()"><br><br>
+	<textarea name="area" rows="30"cols="30"></textarea>
+
+	</select>
+</form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+window.onload=function(){
+	form=document.selForm;
+}
+	function proc1(){
+
+// 		idx =selForm.goo.dan.value;
+// 		vgoo=selForm.goo.options[idx].value;
+		vgoo =form.goo.selectedIndex;
+		vgoo1=selForm.goo.options[vgoo].value;
+		
+		res="";
+			res += "***" +vgoo1+ "단***<br>";
+			for(i=1; i<=9; i++){
+				res += vgoo1 + "*" + i +"=" + (vgoo1*i)+"<br>";
+			}
+			
+			document.querySelector('#result1').innerHTML = res;
+		
+	
+	}
+
+</script>
+</head>
+<body>
+
+<div class="box">
+	<form name="selForm">
+	<select name="goo">
+		<option name="dan" value="2">2단</option>
+		<option name="dan" value="3">3단</option>
+		<option name="dan" value="4">4단</option>
+		<option name="dan" value="5">5단</option>
+		<option name="dan" value="6">6단</option>
+		<option name="dan" value="7">7단</option>
+		<option name="dan" value="8">8단</option>
+		<option name="dan" value="9">9단</option>
+		<input type="button" value="출력" onclick="proc1()"><br><br>
+	</select>
+	
+	</form>
+<div id="result1"></div>
+</div>
+
+</body>
+
+</html>

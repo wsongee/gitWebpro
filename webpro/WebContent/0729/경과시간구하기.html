@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+	function proc1(){
+		today = new Date();
+		birday = new Date(1993,11-1, 23);
+		
+		times = today.getTime() - birday.getTime();
+		
+		res = "생일 : "+birday.toLocaleDateString()+"<br>";
+ 		res += "살아온 millisec : " + times + "<br>";
+		res += "살아온 초 : "+ times/1000+"<br>";
+		res += "살아온 분 : "+ times/1000/60+"<br>";
+		res += "살아온 시간 : "+times/1000/60/60+"<br>";
+		res += "살아온 날 : "+ times/1000/60/60/24+"<br>";
+		res += "살아온 햇수 : "+ times/1000/60/60/24/365+"<br>";
+		
+		
+		document.getElementById('result1').innerHTML=res;
+	}
+	
+	function proc2(){
+		
+		//오늘날짜 생성
+		today = new Date();
+
+		//오늘의 millisec +100일의 millisec
+		times = today.getTime()+(1000*60*60*24*100);
+		
+		//새로운 객체 생성  - nday = new Date(times)
+		nday = new Date(times);
+		
+		//nday를 출력
+		date = nday.toLocaleDateString();
+		
+		document.getElementById('result2').innerHTML=date;
+	}
+
+	function proc3(){
+		
+		today = new Date();
+		chris = new Date(2020, 12-1, 25);
+		
+		times = chris.getTime()-today.getTime();
+		
+		res = "크리스마스 : "+ chris.toLocaleDateString()+"<br>";
+		res +="남은 날: "+ times/1000/60/60/24+"<br>";
+		
+		
+		document.getElementById('result3').innerHTML=res;
+	}
+</script>
+
+</head>
+<body>
+
+<div class="box">
+	<h3>1.경과시간</h3>
+	- 태어난 날로부터 현재까지 날 수 구하기<br>
+	birday = new Date("태어난날");<br>
+	today = new Date() : 현재오늘날짜<br>
+	
+	<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+<div id="result1"></div>
+</div>
+
+<div class="box">
+	<h3>2.경과시간</h3>
+	- 오늘부터 1일일때 100일 후 구하기<br>
+	- today = new Date ()
+	- 100일의 millesec 값 구하기
+	- today.getTime() + 100일의 millesec
+	
+	<br>
+	<input type="button" value="확인" onclick="proc2()">
+	<br><br>
+<div id="result2"></div>
+</div>
+
+<div class="box">
+	<h3>3.경과시간</h3>
+	- 크리스마스까지 남은 날 수 구하기
+	
+	<br>
+	<input type="button" value="확인" onclick="proc3()">
+	<br><br>
+<div id="result3"></div>
+</div>
+
+</body>
+
+</html>

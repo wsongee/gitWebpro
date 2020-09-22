@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+	body{
+		min-width: 700px;
+	}
+	
+	header{
+		width:calc(100% - 1%);
+		height: 100px;
+/* 		background : whitesmoke; */
+  	 	background: -webkit-linear-gradient(to bottom, #ffefba, #ffffff);  
+  	 	background: linear-gradient(to bottom, #ffefba, #ffffff); 
+		text-align: center;
+		letter-spacing: 10px;
+	}
+	nav{
+		text-align: center;
+		letter-spacing: 10px;
+	}
+	ul#menu{
+		border : 2px solid dimgray;
+ 		padding : 20px; 
+		border-left: none;
+		border-right: none;
+	}
+	#menu li{
+		display : inline;
+		margin :40px;
+		padding :50px;
+		letter-spacing: 10px;
+	}
+
+	aside{
+		height : 600px;
+
+	}
+	#left{
+		width: calc(20% - 1%);
+		float: left;
+  		background: peachpuff;   
+		text-align: center;
+		letter-spacing: 10px;
+	}
+	#right{
+		width: calc(20% - 1%);
+		float: right;
+		background: peachpuff;   
+	}
+	#right h1,h2{
+		margin:10px;
+		text-align: center;
+	}
+	#right h4{
+		text-align: center;
+		letter-spacing: 10px;
+	}
+	#right form{
+		margin:10px;
+	}
+	
+	section{
+		width: calc(67% - 5%);
+		height : 600px;
+		float: left;
+ 		background: ivory; 
+	}
+	footer{
+		
+		height : 80px;
+		background: tan;
+		clear :both;
+		color: white;
+		text-align: center;
+	}
+	img{
+		width:50px;
+		height:50px;
+		float: left;
+	}
+	ul.in{
+		list-style-type: none;
+		margin: 0;
+	    padding: 0;
+	    width: 99%;
+		text-align: center;
+	 	font-size : Large;
+		font-weight : bold;
+	}
+	.in a{
+		display: block;
+  	  	color: black;
+   	 	padding: 8px 16px;
+    	text-decoration: none;
+    	border :1px solid black;
+    	border-style: dotted;
+    	/*border-color: lightgrey;*/
+	}
+	.in a:hover {
+		background : rgba(255,255,255,0.5); /*white*/
+		font-size :1.2em;
+		text-decoration : overline;
+	}
+	label{
+		display : inline-block;
+		width:80px;
+		height :40px;
+	}
+	iframe{
+		width:100%;
+		height:596px;
+		/*border:none;*/ <!--테두리없음--->
+		border : 2px slild black;
+	}
+	audio{
+		
+	}
+	#shopping{
+		display : block;
+		margin : 0 auto;
+	
+	}
+
+
+</style>
+</head>
+<body>
+
+<header>
+<br>
+	<h1>Music Shop</h1>
+</header>
+<nav>
+
+<ul id="menu">
+	<li><Strong>HOME</Strong></li>
+	<li><Strong>SHOPPING ABOUT</Strong></li>
+	<li><Strong>NEWS</Strong></li>
+	<li><Strong>MY ACCOUNT</Strong></li>
+	<li><Strong>CONTACTS</Strong></li>
+</ul>
+</nav>
+
+<aside id= "left">
+<br>
+	<h3>CATEGORY</h3>
+	<ul class= "in">
+		<li><a href="가요.html" target="ifr">가요</a></li><br>
+		<li><a href="랩힙합.html" target="ifr">랩/힙합</a></li><br>
+		<li><a href="락.html" target="ifr">락</a></li><br>
+		<li><a href="오에스티.html" target="ifr">OST</a></li><br>
+		<li><a href="트로트.html" target="ifr">트로트</a></li><br>
+		<li><a href="상품.html" target="ifr">MD상품</a></li>
+	</ul>
+</aside>
+
+
+<section>
+
+<article>
+ <iframe src="가요.html" name = "ifr"></iframe>
+</article>
+</section>
+
+<aside id= "right">
+<h1>MUSIC IS<br> MY LIFE</h1>
+<br>
+<form id="login" action="로그인.jsp" method="post" target="ifr">
+	 <fieldset>
+	 <legend>LOGIN</legend>
+	  <label>아이디 :</label> <input type = "text" name = "id"><br>
+	  <label>비밀번호:</label> <input type ="text" name = "pass"><br>
+	  <br>
+	  <input type="submit" value="로그인">
+ 	  <input type="reset" value="재설정">
+	 </fieldset>
+	 <a href="회원가입.html" target="ifr">회원가입</a>
+	 <a href="비밀번호찾기">비밀번호찾기</a>
+ </form> 
+ 	<br>
+ 	<h4>shopping cart</h4>
+ 	<form action=쇼핑카트.html target="ifr">
+ 	<input type="submit" value="쇼핑카트보기" id="shopping" >
+ 	</form>
+ 	<br>
+ 	<h4>streaming</h4>
+ 	<div align="center">
+ 		<audio src="../images2/기타와비트.mp3" autoplay controls></audio>
+	</div>
+</aside>
+
+<footer>
+<br>
+	<p>Copyright (c)2020 <i>WSONGEE</i></p>
+</footer>
+
+
+</body>
+</html>
